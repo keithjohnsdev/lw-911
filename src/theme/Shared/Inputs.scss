@@ -1,0 +1,16 @@
+.gray-input {
+    width: 100%;
+    background-color: #F6F8F8;
+    border-radius: 5px;
+    & .input {
+        width: 100%;
+        border: solid 1px transparent;
+        background-color: transparent;
+        padding: 20px;
+        &:focus {
+            border: solid 1px #cfd4d7;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.lb-button {
+    border: solid 1px transparent;
+    padding: 15px;
+    background-color: #ecf8fc;
+    border-radius: 5px;
+    width: 100%;
+    color: #1287b9;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover, :focus {
+        background-color: #e9f8fc;
+        border: solid 1px #1B93C5;
+    }
+    &.border {
+        border: solid 1px #1b92c546;
+        &:hover, :focus {
+            background-color: #e9f8fc;
+            border: solid 1px #1B93C5;
+        }
+    }
+}
+
+.graydient-button {
+    border: solid 1px transparent;
+    padding: 15px;
+    background: linear-gradient(180deg, #9AA0A3 0%, #73787B 100%), #CFD4D7;
+    border-radius: 5px;
+    width: 100%;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover, :focus {
+        background: linear-gradient(0deg, #9AA0A3 0%, #73787B 100%), #CFD4D7;
+        border: solid 1px transparent;
+    }
+}

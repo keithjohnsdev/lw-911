@@ -1,0 +1,68 @@
+.collapsing-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50px;
+    background: linear-gradient(to bottom, #f6f8f8, #e8ecee);
+    border-bottom: solid 1px #cfd4d7;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+
+    & svg {
+      position: absolute;
+      right: 20px;
+    }
+
+    &:hover {
+      & svg {
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.274));
+      }
+      & svg path {
+        fill: black;
+      }
+    }
+  }
+
+  & .content-wrapper {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #cfd4d7;
+    height: auto;
+    & .content {
+      overflow: hidden;
+      transition: flex-basis 250ms ease-in-out;
+      &.height-235 {
+        flex-basis: 235px;
+      }
+      &.height-210 {
+        flex-basis: 210px;
+      }
+      &.height-140 {
+        flex-basis: 140px;
+      }
+      &.height-70 {
+        flex-basis: 70px;
+      }
+    }
+  }
+
+  &.collapsed {
+    & .header {
+      border-bottom: none;
+    }
+    & .content {
+      flex-basis: 0.1px !important;
+    }
+    & svg {
+      transform: rotate(180deg);
+    }
+  }
+}

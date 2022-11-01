@@ -1,0 +1,43 @@
+@import url("https://rsms.me/inter/inter.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  margin:0;
+
+  padding:0;
+
+}
+
+
+
+.App {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.blue-link {
+  color: #1B93C5;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #75cef5;
+  }
+}
