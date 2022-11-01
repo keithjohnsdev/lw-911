@@ -8,6 +8,7 @@ import {
   mockInsuranceData,
   mockMedicalIssuesData,
   mockVaccinationsData,
+  mockAllergiesData
 } from "../../graphql/mockData";
 
 const Patient = (props) => {
@@ -17,10 +18,11 @@ const Patient = (props) => {
   const insuranceData = mockInsuranceData;
   const medicalIssuesData = mockMedicalIssuesData;
   const vaccinationsData = mockVaccinationsData;
+  const allergiesData = mockAllergiesData;
   return (
     <div className="patient">
       <div className="patient-found-banner">Patient Found Successfully!</div>
-      <CollapsingDiv title="Personal Info" height="235">
+      <CollapsingDiv title="Personal Info" height="240">
         <Container3>
           <div className="patient-info">
             <div className="patient-info-top">
@@ -69,7 +71,7 @@ const Patient = (props) => {
           </div>
         </Container3>
       </CollapsingDiv>
-      <CollapsingDiv title={`Vitals (${vitalsData.length})`} height="210">
+      <CollapsingDiv title={`Vitals (${vitalsData.length})`} height={`${vitalsData.length === 0 ? 70 : vitalsData.length * 70}`}>
         <div className="patient-data-rows">
           {vitalsData.map((metric, index) => {
             return (
@@ -93,7 +95,7 @@ const Patient = (props) => {
       </CollapsingDiv>
       <CollapsingDiv
         title={`Medications (${medicationsData.length})`}
-        height="140"
+        height={`${medicationsData.length === 0 ? 70 : medicationsData.length * 70}`}
       >
         <div className="patient-data-rows">
           {medicationsData.map((metric, index) => {
@@ -109,6 +111,7 @@ const Patient = (props) => {
                     </div>
                     <div className="metric-value">
                       <p>{metric.dosage}</p>
+                      <LightBlueButton>FDA Information</LightBlueButton>
                     </div>
                   </div>
                 </Container3>
@@ -117,7 +120,7 @@ const Patient = (props) => {
           })}
         </div>
       </CollapsingDiv>
-      <CollapsingDiv title={`Allergies (0)`} height="70">
+      <CollapsingDiv title={`Allergies (0)`} height={`${allergiesData.length === 0 ? 70 : allergiesData.length * 70}`}>
         <div className="patient-data-rows">
           <div className="patient-data-row">
             <Container3>

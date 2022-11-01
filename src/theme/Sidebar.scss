@@ -58,19 +58,33 @@
     }
 
     & p {
-        display: flex;
-        justify-content: center;
+      display: flex;
+      justify-content: center;
     }
     & .lb-buttons-wrapper {
       position: relative;
-        margin-top: 30px;
-        & .lb-button {
-            margin-bottom: 12px;
-        }
+      display: flex;
+      flex-direction: column;
+      margin-top: 37px;
+      & .lb-button {
+        margin-bottom: -5px;
+      }
+      & .gray-border-button {
+        margin-bottom: 12px;
+      }
     }
 
     & .gray-input {
-        margin-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    & .green-button {
+      margin-top: 25px;
+    }
+
+    & .hr-bar {
+      margin-top: 33px;
+      border-bottom: solid 1px #cfd4d7;
     }
   }
 
@@ -78,7 +92,7 @@
     display: flex;
     margin-top: auto;
     & .graydient-button {
-        border-radius: 0;
+      border-radius: 0;
     }
   }
 
@@ -87,6 +101,9 @@
   }
 }
 
+.toggle-sidebar-wrapper {
+  position: relative;
+}
 .toggle-sidebar {
   background-color: #ffffff98;
   border: solid 1px #cfd4d7;
@@ -94,10 +111,8 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  // right: -45px;
-  // top: -73px;
-  right: -48px;
-  top: -51px;
+  right: -58px;
+  top: -21px;
   cursor: pointer;
   & .caret-div {
     position: relative;

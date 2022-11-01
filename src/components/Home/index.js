@@ -19,7 +19,7 @@ const Home = (props) => {
 
   return (
     <div className="home-page fullscreen">
-      <Sidebar onSubmit={() => setPatientFound(true)} show={showSidebar} handleHideSidebar={handleHideSidebar}/>
+      <Sidebar onSubmit={() => setPatientFound(true)} show={showSidebar} handleHideSidebar={handleHideSidebar} patientFound={patientFound}/>
       {patientFound ? <Patient /> : <NoPatient />}
       <div className={`toggle-sidebar-home ${showSidebar ? "hidden" : ""}`} onClick={handleShowSidebar}>
         <div className="caret-div">

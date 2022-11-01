@@ -190,6 +190,13 @@
             font-weight: 600;
           }
         }
+        & .lb-button {
+          border: solid 1px #1b92c54b;
+          width: 140px;
+          &:hover {
+            border: solid 1px #1b92c5;
+          }
+        }
       }
 
       & .no-content {

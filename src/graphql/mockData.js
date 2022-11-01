@@ -48,6 +48,8 @@ export const mockPatientViewData = {
     {title: "Gabapentin", dosage: "300MG Cap | Daily"}
   ]
 
+  export const mockAllergiesData = [];
+
   export const mockInsuranceData = [
     {title: "Veterans Association", status: "Verified", effectiveUntil: "Jan 1, 2024"}
   ]
@@ -59,3 +61,4 @@ export const mockPatientViewData = {
   export const mockVaccinationsData = [
     {title: "COVID-19", provider: "Pfizer", date: "Jun 1, 2020"}
   ]
+

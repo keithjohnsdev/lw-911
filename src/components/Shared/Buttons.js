@@ -14,9 +14,17 @@ export const LightBlueButtonBorder = (props) => {
   );
 };
 
-export const GraydientButton = (props) => {
+export const GreenButton = (props) => {
   return (
-    <button className="graydient-button" onClick={props.onClick} type={props.type}>
+    <button className="green-button" onClick={props.onClick} type={props.type}>
+      {props.children}
+    </button>
+  );
+};
+
+export const GrayBorderButton = (props) => {
+  return (
+    <button className="gray-border-button" onClick={props.onClick} type={props.type}>
       {props.children}
     </button>
   );

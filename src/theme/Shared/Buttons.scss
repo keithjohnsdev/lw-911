@@ -1,36 +1,50 @@
 .lb-button {
-    border: solid 1px transparent;
-    padding: 15px;
-    background-color: #ecf8fc;
-    border-radius: 5px;
-    width: 100%;
-    color: #1287b9;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover, :focus {
-        background-color: #e9f8fc;
-        border: solid 1px #1B93C5;
-    }
-    &.border {
-        border: solid 1px #1b92c546;
-        &:hover, :focus {
-            background-color: #e9f8fc;
-            border: solid 1px #1B93C5;
-        }
-    }
+  border: solid 1px transparent;
+  padding: 15px;
+  background-color: #ecf8fc;
+  border-radius: 5px;
+  width: 100%;
+  color: #1287b9;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover,
+  :focus {
+    background-color: #e9f8fc;
+    border: solid 1px #1b93c5;
+  }
 }
 
-.graydient-button {
-    border: solid 1px transparent;
-    padding: 15px;
-    background: linear-gradient(180deg, #9AA0A3 0%, #73787B 100%), #CFD4D7;
-    border-radius: 5px;
-    width: 100%;
-    color: #FFFFFF;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover, :focus {
-        background: linear-gradient(0deg, #9AA0A3 0%, #73787B 100%), #CFD4D7;
-        border: solid 1px transparent;
-    }
+.green-button {
+  border: solid 1px rgb(194, 243, 208);
+  box-shadow: 0px 2px 4px rgba(71, 71, 71, 0.301);
+  padding: 15px;
+  background: rgb(228, 255, 236);
+  border-radius: 5px;
+  width: 100%;
+  color: rgb(44, 138, 71);
+  font-weight: 600;
+  cursor: pointer;
+  &:hover,
+  :focus {
+    border: solid 1px rgb(58, 189, 95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.301);
+  }
+}
+
+.gray-border-button {
+  border: solid 1px #73787b;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  color: #73787b;
+  font-weight: 400;
+  cursor: pointer;
+  &:hover,
+  :focus {
+    background-color: #ffffff;
+    border: solid 1px #000000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.301);
+    color: #000000;
+  }
 }
