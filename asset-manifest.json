@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/lw-911/static/css/main.c5a7f816.css",
-    "main.js": "/lw-911/static/js/main.631d9d9b.js",
+    "main.css": "/lw-911/static/css/main.59d84215.css",
+    "main.js": "/lw-911/static/js/main.fb6d5d4c.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
     "static/media/graph-area.png": "/lw-911/static/media/graph-area.ade9b0b861365c249974.png",
+    "static/media/gabapentin-fda-info.jpg": "/lw-911/static/media/gabapentin-fda-info.efa00b436b671490f574.jpg",
+    "static/media/lorazepam-fda-info.jpg": "/lw-911/static/media/lorazepam-fda-info.79367a99132495007dcd.jpg",
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "index.html": "/lw-911/index.html",
-    "main.c5a7f816.css.map": "/lw-911/static/css/main.c5a7f816.css.map",
-    "main.631d9d9b.js.map": "/lw-911/static/js/main.631d9d9b.js.map",
+    "main.59d84215.css.map": "/lw-911/static/css/main.59d84215.css.map",
+    "main.fb6d5d4c.js.map": "/lw-911/static/js/main.fb6d5d4c.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5a7f816.css",
-    "static/js/main.631d9d9b.js"
+    "static/css/main.59d84215.css",
+    "static/js/main.fb6d5d4c.js"
   ]
 }
