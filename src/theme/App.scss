@@ -7,15 +7,19 @@
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-
-  margin:0;
-
-  padding:0;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
-
+html, body {
+  overflow: hidden;
+}
 
 .App {
   font-family: "Inter", sans-serif;
@@ -33,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blue-link {
-  color: #1B93C5;
+  color: #1b93c5;
   text-decoration: none;
   outline-style: none;
   cursor: pointer;

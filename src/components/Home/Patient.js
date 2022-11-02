@@ -1,6 +1,7 @@
 import CollapsingDiv from "../Shared/CollapsingDiv";
 import { Container3 } from "../Shared/Container";
 import { LightBlueButtonBorder as LightBlueButton } from "../Shared/Buttons";
+import { useState } from "react";
 import {
   mockPatientViewData,
   mockVitalsData,
@@ -19,10 +20,11 @@ const Patient = (props) => {
   const medicalIssuesData = mockMedicalIssuesData;
   const vaccinationsData = mockVaccinationsData;
   const allergiesData = mockAllergiesData;
+
   return (
     <div className="patient">
       <div className="patient-found-banner">Patient Found Successfully!</div>
-      <CollapsingDiv title="Personal Info" height="240">
+      <CollapsingDiv title="Personal Info" height="245">
         <Container3>
           <div className="patient-info">
             <div className="patient-info-top">
@@ -84,7 +86,7 @@ const Patient = (props) => {
                     </div>
                     <div className="metric-value vitals">
                       <p>{metric.value}</p>
-                      <LightBlueButton>View Chart</LightBlueButton>
+                      <LightBlueButton onClick={() => props.showModal(index)}>View Chart</LightBlueButton>
                     </div>
                   </div>
                 </Container3>

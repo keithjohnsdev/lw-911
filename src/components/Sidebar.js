@@ -65,6 +65,15 @@ const Sidebar = (props) => {
     }
   }
 
+  function clearSelection () {
+    setPatientLookupData({
+      fName: "",
+      lName: "",
+      ssn: "",
+      dob: ""
+    });
+  }
+
   useEffect(() => {
     window.addEventListener("keydown", keydownHandler, false);
     return () => window.removeEventListener("keydown", keydownHandler, false);
@@ -207,7 +216,7 @@ const Sidebar = (props) => {
           </form>
           <div className="hr-bar" />
           <div className="lb-buttons-wrapper pt-found">
-            <GrayBorderButton>Clear Selection</GrayBorderButton>
+            <GrayBorderButton onClick={clearSelection}>Clear Selection</GrayBorderButton>
             <GrayBorderButton>Export Data to Form</GrayBorderButton>
             <GrayBorderButton>Export Data to CSV</GrayBorderButton>
             <GrayBorderButton>Auto-Populate Forms</GrayBorderButton>

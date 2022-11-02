@@ -1,7 +1,10 @@
 import "./App.scss";
-import "./Home.scss";
+import "./Home/index.scss";
 import "./Sidebar.scss";
 import "./Shared/Buttons.scss";
 import "./Shared/Inputs.scss";
 import "./Shared/Container.scss";
 import "./Shared/CollapsingDiv.scss";
+import "./Shared/Modal.scss";
+import "./Home/Patient.scss";
+import "./Home/BloodPressureModal.scss";
