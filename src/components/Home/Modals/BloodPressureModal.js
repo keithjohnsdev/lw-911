@@ -5,18 +5,17 @@ const BloodPressureModal = (props) => {
     const [isActive2, setIsActive2] = useState(false);
     const [isActive3, setIsActive3] = useState(false);
 
-    const highlightMetric1 = event => {
-      setIsActive1(current => !current);
-    };
-
-    const highlightMetric2 = event => {
+    const highlightMetric = i => {
+      if (i === 1) {
+        setIsActive1(current => !current);
+      } else if (i === 2) {
         setIsActive2(current => !current);
-      };
-      const highlightMetric3 = event => {
+      } else if (i === 3) {
         setIsActive3(current => !current);
-      };
+      }
+    };
   return (
-    <div className="bp-modal-relative">
+    <div className="modal-relative">
       <div className="x-icon-div" onClick={props.closeModal}>
         <svg
           width="20"
@@ -31,23 +30,23 @@ const BloodPressureModal = (props) => {
           />
         </svg>
       </div>
-      <div className="bp-modal-flex">
-        <div className="bp-header">Blood Pressure (mmHg)</div>
-        <div className="bp-body">
+      <div className="modal-flex">
+        <div className="header">Blood Pressure (mmHg)</div>
+        <div className="body">
             <div className="time-period-banner">Last 24 Hrs</div>
-            <div className="bp-graph">
+            <div className="modal-img">
                 <img src={require("../../../theme/assets/graph-area.png")} alt="blood pressure graph" />
             </div>
             <div className="bp-readings">
-                <div className="bp-reading"  onClick={highlightMetric1}>
+                <div className="bp-reading"  onClick={() => highlightMetric(1)}>
                     <div className="reading-info">Jan 1, 11:08 AM - <span style={{color: "#1B93C5"}}>Withings Scale</span></div>
                     <div className={isActive1 ? 'reading-measurement red' : 'reading-measurement'}>167 / 94</div>
                 </div>
-                <div className="bp-reading" onClick={highlightMetric2}>
+                <div className="bp-reading" onClick={() => highlightMetric(2)}>
                     <div className="reading-info">Jan 1, 10:26 AM - Manual Entry</div>
                     <div className={isActive2 ? 'reading-measurement red' : 'reading-measurement'}>144 / 72</div>
                 </div>
-                <div className="bp-reading" onClick={highlightMetric3}>
+                <div className="bp-reading" onClick={() => highlightMetric(3)}>
                     <div className="reading-info">Jan 1, 9:12 AM - <span style={{color: "#1B93C5"}}>Withings Scale</span></div>
                     <div className={isActive3 ? 'reading-measurement red' : 'reading-measurement'}>155 / 88</div>
                 </div>

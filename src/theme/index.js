@@ -7,4 +7,4 @@ import "./Shared/Container.scss";
 import "./Shared/CollapsingDiv.scss";
 import "./Shared/Modal.scss";
 import "./Home/Patient.scss";
-import "./Home/BloodPressureModal.scss";
+import "./Home/HomeModals.scss";

@@ -123,16 +123,22 @@
             white-space: nowrap;
             min-width: fit-content;
             & p {
-              margin-right: 15px;
+              padding: 10px 15px;
+              &.red {
+                color: #FB3156;
+              }
             }
             &.vitals {
               font-size: 30px;
               font-weight: 600;
+              & p {
+                cursor: pointer;
+              }
             }
           }
           & .lb-button {
             border: solid 1px #1b92c54b;
-            width: 140px;
+            width: 136px;
             &:hover {
               border: solid 1px #1b92c5;
             }

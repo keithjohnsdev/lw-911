@@ -1,5 +1,6 @@
 import CollapsingDiv from "../Shared/CollapsingDiv";
 import { Container3 } from "../Shared/Container";
+import VitalsRow from "../Shared/VitalsRow";
 import { LightBlueButtonBorder as LightBlueButton } from "../Shared/Buttons";
 import { useState } from "react";
 import {
@@ -9,7 +10,7 @@ import {
   mockInsuranceData,
   mockMedicalIssuesData,
   mockVaccinationsData,
-  mockAllergiesData
+  mockAllergiesData,
 } from "../../graphql/mockData";
 
 const Patient = (props) => {
@@ -73,31 +74,23 @@ const Patient = (props) => {
           </div>
         </Container3>
       </CollapsingDiv>
-      <CollapsingDiv title={`Vitals (${vitalsData.length})`} height={`${vitalsData.length === 0 ? 70 : vitalsData.length * 70}`}>
+      <CollapsingDiv
+        title={`Vitals (${vitalsData.length})`}
+        height={`${vitalsData.length === 0 ? 70 : vitalsData.length * 70}`}
+      >
         <div className="patient-data-rows">
           {vitalsData.map((metric, index) => {
             return (
-              <div className="patient-data-row" key={index}>
-                <Container3>
-                  <div className="row-content">
-                    <div className="metric-title">
-                      <p className="title">{metric.title}</p>
-                      <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
-                    </div>
-                    <div className="metric-value vitals">
-                      <p>{metric.value}</p>
-                      <LightBlueButton onClick={() => props.showModal(index)}>View Chart</LightBlueButton>
-                    </div>
-                  </div>
-                </Container3>
-              </div>
+              <VitalsRow key={index} metric={metric} index={index} showVitalsModal={props.showVitalsModal}/>
             );
           })}
         </div>
       </CollapsingDiv>
       <CollapsingDiv
         title={`Medications (${medicationsData.length})`}
-        height={`${medicationsData.length === 0 ? 70 : medicationsData.length * 70}`}
+        height={`${
+          medicationsData.length === 0 ? 70 : medicationsData.length * 70
+        }`}
       >
         <div className="patient-data-rows">
           {medicationsData.map((metric, index) => {
@@ -113,7 +106,11 @@ const Patient = (props) => {
                     </div>
                     <div className="metric-value">
                       <p>{metric.dosage}</p>
-                      <LightBlueButton>FDA Information</LightBlueButton>
+                      <LightBlueButton
+                        onClick={() => props.showMedicationsModal(metric.title)}
+                      >
+                        FDA Information
+                      </LightBlueButton>
                     </div>
                   </div>
                 </Container3>
@@ -122,7 +119,12 @@ const Patient = (props) => {
           })}
         </div>
       </CollapsingDiv>
-      <CollapsingDiv title={`Allergies (0)`} height={`${allergiesData.length === 0 ? 70 : allergiesData.length * 70}`}>
+      <CollapsingDiv
+        title={`Allergies (0)`}
+        height={`${
+          allergiesData.length === 0 ? 70 : allergiesData.length * 70
+        }`}
+      >
         <div className="patient-data-rows">
           <div className="patient-data-row">
             <Container3>

@@ -1,4 +1,4 @@
-.bp-modal-relative {
+.modal-relative {
   position: relative;
 
   & .x-icon-div {
@@ -15,11 +15,11 @@
   }
 }
 
-.bp-modal-flex {
+.modal-flex {
   display: flex;
   flex-direction: column;
 
-  & .bp-header {
+  & .header {
     flex: 0 0 60px;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
     border-bottom: solid 1px #cfd4d7;
   }
 
-  & .bp-body {
+  & .body {
     display: flex;
     flex-direction: column;
     & .time-period-banner {
@@ -43,7 +43,7 @@
         font-weight: 600;
     }
 
-    & .bp-graph {
+    & .modal-img {
 
         img {
             width: 100%;
@@ -63,6 +63,8 @@
             justify-content: space-between;
             padding: 0 10px;
             cursor: pointer;
+            user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
 
             & .reading-info {
                 font-size: 14px;
@@ -74,11 +76,22 @@
                 font-size: 17px;
                 padding: 10px;
 
+
                 &.red {
                     color: #FB3156;
                 }
             }
         }
     }
+
+    &.fda-img {
+      background-color: #edf0f1;
+    }
   }
+}
+
+.fda-img-wrapper {
+  border: solid 1px #cfd4d7;
+  border-radius: 5px;
+  margin: 20px;
 }
