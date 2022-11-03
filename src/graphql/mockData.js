@@ -51,7 +51,8 @@ export const mockPatientViewData = {
   export const mockAllergiesData = [];
 
   export const mockInsuranceData = [
-    {title: "Veterans Association", status: "Verified", effectiveUntil: "Jan 1, 2024"}
+    {title: "Veterans Association (Health)", status: "Verified", effectiveUntil: "Jan 1, 2024"},
+    {title: "GEICO (Auto)", status: "Verified", effectiveUntil: "Aug 1, 2024"}
   ]
 
   export const mockMedicalIssuesData = [

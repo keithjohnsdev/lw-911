@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Shared/Modal";
 import BloodPressureModal from "./Modals/BloodPressureModal";
+import HeartRateModal from "./Modals/HeartRateModal";
+import BloodGlucoseModal from "./Modals/BloodGlucoseModal";
 import LorazepamModal from "./Modals/LorazepamModal";
 import GabapentinModal from "./Modals/GabapentinModal";
 
@@ -13,8 +15,10 @@ const Home = (props) => {
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
   const [bloodPressureModal, setBloodPressureModal] = useState(false);
+  const [heartRateModal, setHeartRateModal] = useState(false);
   const [lorazepamModal, setLorazepamModal] = useState(false);
   const [gabapentinModal, setGabapentinModal] = useState(false);
+  const [bloodGlucoseModal, setBloodGlucoseModal] = useState(false);
 
   function handleShowSidebar() {
     setShowSidebar(true);
@@ -27,6 +31,10 @@ const Home = (props) => {
   function showVitalsModal(metric) {
     if (metric === "Blood Pressure (mmHg)") {
       setBloodPressureModal(true);
+    } else if (metric === "Heart Rate (bpm)") {
+      setHeartRateModal(true);
+    } else if (metric === "Blood Glucose (mg/dL)") {
+      setBloodGlucoseModal(true);
     }
   }
 
@@ -69,6 +77,18 @@ const Home = (props) => {
         onBackdropClick={() => setBloodPressureModal(false)}
       >
         <BloodPressureModal closeModal={() => setBloodPressureModal(false)} />
+      </Modal>
+      <Modal
+        show={heartRateModal}
+        onBackdropClick={() => setHeartRateModal(false)}
+      >
+        <HeartRateModal closeModal={() => setHeartRateModal(false)} />
+      </Modal>
+      <Modal
+        show={bloodGlucoseModal}
+        onBackdropClick={() => setBloodGlucoseModal(false)}
+      >
+        <BloodGlucoseModal closeModal={() => setBloodGlucoseModal(false)} />
       </Modal>
       <Modal
         show={lorazepamModal}

@@ -133,7 +133,9 @@ const Patient = (props) => {
           </div>
         </div>
       </CollapsingDiv>
-      <CollapsingDiv title={`Insurances (${insuranceData.length})`} height="70">
+      <CollapsingDiv title={`Insurances (${insuranceData.length})`} height={`${
+          insuranceData.length === 0 ? 70 : insuranceData.length * 70
+        }`}>
         <div className="patient-data-rows">
           {insuranceData.map((metric, index) => {
             return (
@@ -163,8 +165,10 @@ const Patient = (props) => {
         </div>
       </CollapsingDiv>
       <CollapsingDiv
-        title={`Medical Issues (${insuranceData.length})`}
-        height="70"
+        title={`Medical Issues (${medicalIssuesData.length})`}
+        height={`${
+          medicalIssuesData.length === 0 ? 70 : medicalIssuesData.length * 70
+        }`}
       >
         <div className="patient-data-rows">
           {medicalIssuesData.map((metric, index) => {
@@ -198,7 +202,9 @@ const Patient = (props) => {
       </CollapsingDiv>
       <CollapsingDiv
         title={`Vaccinations (${vaccinationsData.length})`}
-        height="70"
+        height={`${
+          vaccinationsData.length === 0 ? 70 : vaccinationsData.length * 70
+        }`}
       >
         <div className="patient-data-rows">
           {vaccinationsData.map((metric, index) => {

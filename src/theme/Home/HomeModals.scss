@@ -53,6 +53,7 @@
     & .bp-readings {
         display: flex;
         flex-direction: column;
+        border-top: solid 1px #cfd4d7;
 
         & .bp-reading {
             flex: 0 0 56px;
