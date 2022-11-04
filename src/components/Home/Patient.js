@@ -2,7 +2,6 @@ import CollapsingDiv from "../Shared/CollapsingDiv";
 import { Container3 } from "../Shared/Container";
 import VitalsRow from "../Shared/VitalsRow";
 import { LightBlueButtonBorder as LightBlueButton } from "../Shared/Buttons";
-import { useState } from "react";
 import {
   mockPatientViewData,
   mockVitalsData,
@@ -21,6 +20,10 @@ const Patient = (props) => {
   const medicalIssuesData = mockMedicalIssuesData;
   const vaccinationsData = mockVaccinationsData;
   const allergiesData = mockAllergiesData;
+
+  function viewInsuranceDetails (type) {
+      props.showInsurance(type);
+  }
 
   return (
     <div className="patient">
@@ -143,7 +146,7 @@ const Patient = (props) => {
                 <Container3>
                   <div className="row-content">
                     <div className="metric-title">
-                      <p className="title">{metric.title}</p>
+                      <p className="title">{`${metric.title} (${metric.type})`}</p>
                       {metric.lastReading && (
                         <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
                       )}
@@ -156,6 +159,11 @@ const Patient = (props) => {
                         <span style={{ margin: "0 7px" }}>|</span>
                         {`Effective Until: ${metric.effectiveUntil}`}
                       </p>
+                      <LightBlueButton
+                        onClick={() => viewInsuranceDetails(metric.type)}
+                      >
+                        View Details
+                      </LightBlueButton>
                     </div>
                   </div>
                 </Container3>

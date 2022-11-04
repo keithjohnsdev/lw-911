@@ -51,8 +51,8 @@ export const mockPatientViewData = {
   export const mockAllergiesData = [];
 
   export const mockInsuranceData = [
-    {title: "Veterans Association (Health)", status: "Verified", effectiveUntil: "Jan 1, 2024"},
-    {title: "GEICO (Auto)", status: "Verified", effectiveUntil: "Aug 1, 2024"}
+    {title: "Veterans Association", type: "Health", status: "Verified", effectiveUntil: "Jan 1, 2024"},
+    {title: "GEICO", type: "Auto", status: "Verified", effectiveUntil: "Aug 1, 2024"}
   ]
 
   export const mockMedicalIssuesData = [
@@ -63,3 +63,34 @@ export const mockPatientViewData = {
     {title: "COVID-19", provider: "Pfizer", date: "Jun 1, 2020"}
   ]
 
+  export const mockHealthInsuranceData = {
+    name: "Edwin Rivera",
+    fName: "Edwin",
+    lName: "Rivera",
+    dob: "10/31/1995",
+
+  }
+
+  export const mockAutoInsuranceData = {
+    holder: "Edwin Rivera",
+    type: "Auto - Private Passenger Voluntary",
+    number: "000961269697",
+    status: "Active",
+    formNumber: "AU10636",
+    effectiveDate: "6/10/2023",
+    expirationDate: "12/10/2023",
+    agency: "GEICO",
+    agencyPhone: "727-375-5501",
+    coveredAsset: "2008 Toyota Yaris",
+    category: "Vehicle",
+    coverage1: "Personal Injury Protection",
+    limit1: "$10,000",
+    coverage2: "Bodily Injury Liability",
+    limit2: "$10,000 / $20,000",
+    coverage3: "Property Damage Liability",
+    limit3: "$25,000",
+    deductibleDesc1: "Collision",
+    deductible1: "$500",
+    deductibleDesc2: "Comprehensive (Full)",
+    deductible2: "$500"
+  }

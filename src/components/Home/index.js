@@ -1,6 +1,8 @@
 import Sidebar from "../Sidebar";
 import NoPatient from "./NoPatient";
 import Patient from "./Patient";
+import HealthInsurance from "./HealthInsurance";
+import AutoInsurance from "./AutoInsurance";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +21,8 @@ const Home = (props) => {
   const [lorazepamModal, setLorazepamModal] = useState(false);
   const [gabapentinModal, setGabapentinModal] = useState(false);
   const [bloodGlucoseModal, setBloodGlucoseModal] = useState(false);
+  const [showHealthInsurance, setShowHealthInsurance] = useState(false);
+  const [showAutoInsurance, setShowAutoInsurance] = useState(false);
 
   function handleShowSidebar() {
     setShowSidebar(true);
@@ -40,9 +44,17 @@ const Home = (props) => {
 
   function showMedicationsModal(med) {
     if (med === "Lorazepam") {
-      setLorazepamModal(true)
+      setLorazepamModal(true);
     } else if (med === "Gabapentin") {
       setGabapentinModal(true);
+    }
+  }
+
+  function showInsurance(type) {
+    if (type === "Health") {
+      setShowHealthInsurance(true);
+    } else if (type === "Auto") {
+      setShowAutoInsurance(true);
     }
   }
 
@@ -54,10 +66,15 @@ const Home = (props) => {
         handleHideSidebar={handleHideSidebar}
         patientFound={patientFound}
       />
-      {patientFound ? (
+      { showHealthInsurance 
+      ? <HealthInsurance />
+      : showAutoInsurance
+      ? <AutoInsurance />
+      : patientFound ? (
         <Patient
           showVitalsModal={showVitalsModal}
           showMedicationsModal={showMedicationsModal}
+          showInsurance={showInsurance}
         />
       ) : (
         <NoPatient />

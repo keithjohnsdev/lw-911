@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     flex: 0 0 50px;
-    background: linear-gradient(to bottom, #f6f8f8, #e8ecee);
+    background: linear-gradient(to bottom, #f6f8f8, #dee2e4);
     border-bottom: solid 1px #cfd4d7;
     cursor: pointer;
     z-index: 2;
@@ -46,6 +46,9 @@
       }
       &.height-210 {
         flex-basis: 210px;
+      }
+      &.height-150 {
+        flex-basis: 150px;
       }
       &.height-140 {
         flex-basis: 140px;

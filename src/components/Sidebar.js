@@ -54,7 +54,8 @@ const Sidebar = (props) => {
     });
   }
 
-  function handleLookup() {
+  function handleLookup(event) {
+    event.preventDefault();
     console.log(patientLookupData);
     props.onSubmit();
   }
@@ -213,6 +214,14 @@ const Sidebar = (props) => {
                 </div>
               </div>
             </div>
+            <GreenButton
+              className="find-patient"
+              type="submit"
+              form="pt-lookup-form"
+              onClick={handleLookup}
+            >
+              Find Patient
+            </GreenButton>
           </form>
           <div className="hr-bar" />
           <div className="lb-buttons-wrapper pt-found">
@@ -364,7 +373,7 @@ const Sidebar = (props) => {
               className="find-patient"
               type="submit"
               form="pt-lookup-form"
-              onClick={() => handleLookup(patientLookupData)}
+              onClick={handleLookup}
             >
               Find Patient
             </GreenButton>
