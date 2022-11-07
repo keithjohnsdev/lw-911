@@ -16,3 +16,38 @@
         text-decoration: underline;
     }
 }
+
+.data-integrations {
+    margin: 40px 0;
+}
+
+.traffic-reports {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    & .traffic-report {
+        width: 50%;
+        & h4 {
+            font-weight: 400;
+            color: #73787B;
+            margin-bottom: 10px;
+        }
+        & p {
+            font-weight: 600;
+            font-size: 12px;
+        }
+    }
+}
+
+.accident-report {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h3 {
+        margin-bottom: 20px;
+    }
+    & img {
+        width: 90%;
+    }
+}

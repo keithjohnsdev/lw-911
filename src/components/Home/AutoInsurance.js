@@ -172,9 +172,58 @@ const AutoInsurance = (props) => {
             <div className="claim-timeline-title">
               <h3>Claim #: 2022-132</h3>
             </div>
-            <img src={require("../../theme/assets/claim-timeline.png")} alt="claims timeline" />
-            <img src={require("../../theme/assets/auto-claim-details.png")} alt="claim details" />
-
+            <img
+              src={require("../../theme/assets/claim-timeline.png")}
+              alt="claims timeline"
+            />
+            <img
+              src={require("../../theme/assets/auto-claim-details.png")}
+              alt="claim details"
+            />
+          </div>
+        </Container2>
+      </CollapsingDiv>
+      <CollapsingDiv title="LifeWallet Data Integrations" height="fit">
+        <Container2>
+          <div className="data-integrations">
+            <div className="traffic-reports">
+              <div className="traffic-report">
+                <h4>Traffic Reports Generated for Member</h4>
+                <p>January 1, 2022</p>
+                <p>Chicago, IL</p>
+                <p>Ofc. Johnson</p>
+                <p>Injury Level 1</p>
+                <p>Passenger in Vehicle</p>
+                <p>Member Medicare eligible on this date</p>
+              </div>
+              <div className="traffic-report">
+                <h4>Traffic Reports Generated for Member</h4>
+                <p>July 7, 2022</p>
+                <p>Topeka, KA</p>
+                <p>Ofc. Smith</p>
+                <p>Injury Level 3</p>
+                <p>Driver of Vehicle</p>
+                <p>Member Medicare eligible on this date</p>
+              </div>
+            </div>
+            <div className="traffic-reports">
+              <div className="traffic-report">
+                <h4>Live Medical Records</h4>
+                <p>
+                  Member - DID execute his/her HIPAA release for information
+                  (click to view)
+                </p>
+                <p>Humana - Member's health plan today</p>
+                <p>Previous existing medical conditions on this date (click)</p>
+              </div>
+            </div>
+            <div className="accident-report">
+              <h3>Auto Accident Damage Report</h3>
+              <img
+              src={require("../../theme/assets/accident-report.png")}
+              alt="claim details"
+            />
+            </div>
           </div>
         </Container2>
       </CollapsingDiv>
