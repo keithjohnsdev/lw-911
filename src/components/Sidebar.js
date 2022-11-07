@@ -226,7 +226,6 @@ const Sidebar = (props) => {
           <div className="hr-bar" />
           <div className="lb-buttons-wrapper pt-found">
             <GrayBorderButton onClick={clearSelection}>Clear Selection</GrayBorderButton>
-            <GrayBorderButton>Export Data to Form</GrayBorderButton>
             <GrayBorderButton>Export Data to CSV</GrayBorderButton>
             <GrayBorderButton>Auto-Populate Forms</GrayBorderButton>
             <GrayBorderButton>Third Party Insurance Lookup</GrayBorderButton>

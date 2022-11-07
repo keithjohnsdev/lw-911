@@ -165,7 +165,7 @@ const AutoInsurance = (props) => {
           </div>
         </Container2>
       </CollapsingDiv>
-      <CollapsingDiv title="Claims History" height="fit">
+      <CollapsingDiv title="Claims History" height="fit" collapsed="true">
         <Container2>
           <div className="claims-history">
             <h2>Claim Timeline</h2>
@@ -173,7 +173,7 @@ const AutoInsurance = (props) => {
               <h3>Claim #: 2022-132</h3>
             </div>
             <img src={require("../../theme/assets/claim-timeline.png")} alt="claims timeline" />
-            <img src={require("../../theme/assets/auto-claim-details.png")} alt="claims timeline" />
+            <img src={require("../../theme/assets/auto-claim-details.png")} alt="claim details" />
 
           </div>
         </Container2>

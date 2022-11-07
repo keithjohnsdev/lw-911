@@ -89,7 +89,7 @@ const patientAutoInsuranceData = mockAutoInsuranceData;
             </div>
             <div className="info-div">
               <p>Agency Name</p>
-              <p className="info-p">ABC Southeast, Inc.</p>
+              <p className="info-p">Aetna</p>
             </div>
             <div className="info-div">
               <p>Agency Phone</p>

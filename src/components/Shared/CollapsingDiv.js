@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Must provide props.height for animation to work smoothly
 const CollapsingDiv = (props) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(props.collapsed || false);
 
   function toggleCollapsed() {
     setCollapsed(!collapsed);
