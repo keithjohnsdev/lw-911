@@ -41,6 +41,9 @@
     & .content {
       overflow: hidden;
       transition: flex-basis 250ms ease-in-out;
+      &.height-fit {
+        flex-basis: auto;
+      }
       &.height-245 {
         flex-basis: 245px;
       }

@@ -1,13 +1,14 @@
 import CollapsingDiv from "../Shared/CollapsingDiv";
-import { Container3 } from "../Shared/Container";
-import { mockPatientViewData, mockHealthInsuranceData } from "../../graphql/mockData";
+import { Container3, Container2 } from "../Shared/Container";
+import { mockPatientViewData, mockHealthInsuranceData, mockAutoInsuranceData } from "../../graphql/mockData";
 const HealthInsurance = (props) => {
   const patientPersonalData = mockPatientViewData;
   const patientHealthInsuranceData = mockHealthInsuranceData;
+const patientAutoInsuranceData = mockAutoInsuranceData;
   return (
     <div className="insurance">
       <div className="nav-banner">
-        <div className="nav-left blue-link">Back to Patient</div>
+        <div className="nav-left blue-link" onClick={props.navigateHome}>Back to Patient</div>
         <div className="nav-center">Health Insurance Details</div>
         <div className="nav-right blue-link">Export to Excel</div>
       </div>
@@ -49,23 +50,53 @@ const HealthInsurance = (props) => {
           </div>
         </Container3>
       </CollapsingDiv>
-      <CollapsingDiv title="Policy Information">
-        <Container3>
-            <div className="form-row">
-              <div className="info-div">
-                <p>First Name</p>
-                <p className="info-p">{patientHealthInsuranceData.fName}</p>
-              </div>
-              <div className="info-div">
-                <p>Last Name</p>
-                <p className="info-p">{patientHealthInsuranceData.lName}</p>
-              </div>
-              <div className="info-div">
-                <p>Date of Birth</p>
-                <p className="info-p">{patientHealthInsuranceData.dob}</p>
-              </div>
+      <CollapsingDiv title="Policy Details" height="210">
+        <Container2>
+          <div className="form-row">
+            <div className="info-div">
+              <p>Policy Holder</p>
+              <p className="info-p">{patientAutoInsuranceData.holder}</p>
             </div>
-        </Container3>
+            <div className="info-div">
+              <p>Policy Type</p>
+              <p className="info-p">Health - HMO</p>
+            </div>
+            <div className="info-div">
+              <p>Policy Number</p>
+              <p className="info-p">{patientAutoInsuranceData.number}</p>
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="info-div">
+              <p>Policy Status</p>
+              <p className="info-p">{patientAutoInsuranceData.status}</p>
+            </div>
+            <div className="info-div">
+              <p>Form Number</p>
+              <p className="info-p">{patientAutoInsuranceData.formNumber}</p>
+            </div>
+            <div className="info-div">
+              <p>Effective Date</p>
+              <p className="info-p">{patientAutoInsuranceData.effectiveDate}</p>
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="info-div">
+              <p>Expiration Date</p>
+              <p className="info-p">
+                {patientAutoInsuranceData.expirationDate}
+              </p>
+            </div>
+            <div className="info-div">
+              <p>Agency Name</p>
+              <p className="info-p">ABC Southeast, Inc.</p>
+            </div>
+            <div className="info-div">
+              <p>Agency Phone</p>
+              <p className="info-p">{patientAutoInsuranceData.agencyPhone}</p>
+            </div>
+          </div>
+        </Container2>
       </CollapsingDiv>
     </div>
   );

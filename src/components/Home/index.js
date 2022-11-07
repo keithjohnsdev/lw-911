@@ -58,6 +58,11 @@ const Home = (props) => {
     }
   }
 
+  function navigateHome () {
+    setShowHealthInsurance(false);
+    setShowAutoInsurance(false);
+  }
+
   return (
     <div className="home-page fullscreen">
       <Sidebar
@@ -67,9 +72,9 @@ const Home = (props) => {
         patientFound={patientFound}
       />
       { showHealthInsurance 
-      ? <HealthInsurance />
+      ? <HealthInsurance navigateHome={navigateHome}/>
       : showAutoInsurance
-      ? <AutoInsurance />
+      ? <AutoInsurance navigateHome={navigateHome}/>
       : patientFound ? (
         <Patient
           showVitalsModal={showVitalsModal}
