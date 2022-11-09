@@ -176,10 +176,118 @@ const AutoInsurance = (props) => {
               src={require("../../theme/assets/claim-timeline.png")}
               alt="claims timeline"
             />
-            <img
-              src={require("../../theme/assets/auto-claim-details.png")}
-              alt="claim details"
-            />
+            <br />
+            <div className="form-row">
+              <div className="info-div">
+                <p>Date of Loss:</p>
+                <p className="info-p">01/01/2022</p>
+              </div>
+              <div className="info-div">
+                <p>Time of Loss:</p>
+                <p className="info-p">2:31pm EST</p>
+              </div>
+              <div className="info-div">
+                <p>Description</p>
+                <p className="info-p">First Notice of Loss</p>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Notification Type:</p>
+                <p className="info-p">Incoming Call</p>
+              </div>
+              <div className="info-div">
+                <p>Member Name:</p>
+                <p className="info-p">
+                  Edwin Rivera <br /> Nancy Rivera
+                </p>
+              </div>
+              <div className="info-div">
+                <p>Notification Date:</p>
+                <p className="info-p">01/02/2022</p>
+              </div>
+            </div>
+            <br />
+            <div style={{ width: "100%", borderBottom: "solid 1px #cfd4d7" }} />
+            <div className="form-row">
+              <div className="info-div">
+                <p>Date of Event:</p>
+                <p className="info-p">03/01/2022</p>
+              </div>
+              <div className="info-div">
+                <p>Description</p>
+                <p className="info-p">Independent Medical Exam (IME)</p>
+              </div>
+              <div className="info-div"></div>
+            </div>
+            <br />
+            <div style={{ width: "100%", borderBottom: "solid 1px #cfd4d7" }} />
+            <br />
+            <h4>Loss Details / Key Facts</h4>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Date of Loss:</p>
+                <p className="info-p">12/07/2013</p>
+              </div>
+              <div className="info-div">
+                <p>Time of Loss:</p>
+                <p className="info-p">6:00pm EST</p>
+              </div>
+              <div className="info-div">
+                <p>Date Reported</p>
+                <p className="info-p">12/8/2013 11:24:49 AM Central</p>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Reported to:</p>
+                <p className="info-p">Fabiola Montoya</p>
+              </div>
+              <div className="info-div">
+                <p>Cross File Claim:</p>
+                <p className="info-p"></p>
+              </div>
+              <div className="info-div">
+                <p>Companion Claims:</p>
+                <p className="info-p"></p>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Loss Description:</p>
+                <p className="info-p"></p>
+              </div>
+              <div className="info-div">
+                <p>Loss Type:</p>
+                <p className="info-p">Contact with other vehicle/property</p>
+              </div>
+              <div className="info-div">
+                <p>Detailed Loss Type:</p>
+                <p className="info-p">
+                  Rear-end accident- Other party rear-ended insured
+                </p>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Number of Involved Vehicles Damaged:</p>
+                <p className="info-p">2</p>
+              </div>
+              <div className="info-div">
+                <p>Number of Other Property Assets Damaged:</p>
+                <p className="info-p">0</p>
+              </div>
+              <div className="info-div">
+                <p>Hit and Run:</p>
+                <p className="info-p">No</p>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="info-div">
+                <p>Phantom Vehicle:</p>
+                <p className="info-p">No</p>
+              </div>
+            </div>
           </div>
         </Container2>
       </CollapsingDiv>
@@ -220,9 +328,9 @@ const AutoInsurance = (props) => {
             <div className="accident-report">
               <h3>Auto Accident Damage Report</h3>
               <img
-              src={require("../../theme/assets/accident-report.png")}
-              alt="claim details"
-            />
+                src={require("../../theme/assets/accident-report.png")}
+                alt="claim details"
+              />
             </div>
           </div>
         </Container2>

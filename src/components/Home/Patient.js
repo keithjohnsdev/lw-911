@@ -123,17 +123,31 @@ const Patient = (props) => {
         </div>
       </CollapsingDiv>
       <CollapsingDiv
-        title={`Allergies (0)`}
+        title={`Allergies (${allergiesData.length})`}
         height={`${
           allergiesData.length === 0 ? 70 : allergiesData.length * 70
         }`}
       >
-        <div className="patient-data-rows">
-          <div className="patient-data-row">
-            <Container3>
-              <p className="no-content">No Allergies Listed.</p>
-            </Container3>
-          </div>
+         <div className="patient-data-rows">
+          {allergiesData.map((metric, index) => {
+            return (
+              <div className="patient-data-row" key={index}>
+                <Container3>
+                  <div className="row-content">
+                    <div className="metric-title">
+                      <p className="title">{metric.title}</p>
+                      {metric.lastReading && (
+                        <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
+                      )}
+                    </div>
+                    <div className="metric-value">
+                      <p>ICD-10 Code: <span style={{fontWeight: "600"}}>{metric.ICD}</span></p>
+                    </div>
+                  </div>
+                </Container3>
+              </div>
+            );
+          })}
         </div>
       </CollapsingDiv>
       <CollapsingDiv title={`Insurances (${insuranceData.length})`} height={`${
