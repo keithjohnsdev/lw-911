@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lw-911/static/css/main.654c7a5a.css",
-    "main.js": "/lw-911/static/js/main.24d52697.js",
+    "main.css": "/lw-911/static/css/main.9d345a37.css",
+    "main.js": "/lw-911/static/js/main.217c0cb6.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
     "static/media/auto-claim-details.png": "/lw-911/static/media/auto-claim-details.5caece8cfec49f2db44e.png",
     "static/media/accident-report.png": "/lw-911/static/media/accident-report.948f2deefec60663a936.png",
@@ -13,12 +13,12 @@
     "static/media/claim-timeline.png": "/lw-911/static/media/claim-timeline.fa281ad240a3d970349d.png",
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "index.html": "/lw-911/index.html",
-    "main.654c7a5a.css.map": "/lw-911/static/css/main.654c7a5a.css.map",
-    "main.24d52697.js.map": "/lw-911/static/js/main.24d52697.js.map",
+    "main.9d345a37.css.map": "/lw-911/static/css/main.9d345a37.css.map",
+    "main.217c0cb6.js.map": "/lw-911/static/js/main.217c0cb6.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.654c7a5a.css",
-    "static/js/main.24d52697.js"
+    "static/css/main.9d345a37.css",
+    "static/js/main.217c0cb6.js"
   ]
 }
