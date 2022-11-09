@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/lw-911/static/css/main.9d345a37.css",
-    "main.js": "/lw-911/static/js/main.217c0cb6.js",
+    "main.js": "/lw-911/static/js/main.957f4aaf.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
-    "static/media/auto-claim-details.png": "/lw-911/static/media/auto-claim-details.5caece8cfec49f2db44e.png",
     "static/media/accident-report.png": "/lw-911/static/media/accident-report.948f2deefec60663a936.png",
     "static/media/graph-area.png": "/lw-911/static/media/graph-area.ade9b0b861365c249974.png",
     "static/media/gabapentin-fda-info.jpg": "/lw-911/static/media/gabapentin-fda-info.efa00b436b671490f574.jpg",
@@ -14,11 +13,11 @@
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "index.html": "/lw-911/index.html",
     "main.9d345a37.css.map": "/lw-911/static/css/main.9d345a37.css.map",
-    "main.217c0cb6.js.map": "/lw-911/static/js/main.217c0cb6.js.map",
+    "main.957f4aaf.js.map": "/lw-911/static/js/main.957f4aaf.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d345a37.css",
-    "static/js/main.217c0cb6.js"
+    "static/js/main.957f4aaf.js"
   ]
 }
