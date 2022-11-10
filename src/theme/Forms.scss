@@ -3,3 +3,41 @@
     display: flex;
     min-width: 860px;
 }
+
+.form-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+    & .patient-found-banner {
+        background-color: #f6f8f8;
+        border-bottom: solid 1px #cfd4d7;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 63px;
+        color: #1b93c5;
+        font-weight: 600;
+        z-index: 2;
+      }
+      & .form {
+        & img {
+            width: 100%;
+        }
+      }
+}
+
+
+.template-row {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 3%;
+    border-bottom: solid 1px #cfd4d7;
+    cursor: pointer;
+    &:hover {
+        background-color: #e7f2fa;
+    }
+}

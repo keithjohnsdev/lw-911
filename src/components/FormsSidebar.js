@@ -1,10 +1,8 @@
 import { GrayBorderButton } from "./Shared/Buttons";
 import { useNavigate } from "react-router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+
 const Sidebar = (props) => {
   const navigate = useNavigate();
-
   return (
     <div className={`sidebar ${props.show ? "" : "collapsed"}`}>
       <div className="sb-header">
@@ -29,8 +27,8 @@ const Sidebar = (props) => {
         <div className="forms-title">AUTO-POPULATE FORMS</div>
         <div className="hr-bar" />
         <div className="lb-buttons-wrapper pt-found">
-          <GrayBorderButton>Search Form Templates</GrayBorderButton>
-          <GrayBorderButton>
+          <GrayBorderButton onClick={props.openFormList}>Search Form Templates</GrayBorderButton>
+          <GrayBorderButton onClick={props.fillForm}>
             Auto-Populate Form with LifeWallet User
           </GrayBorderButton>
           <GrayBorderButton>Search Previously Completed Forms</GrayBorderButton>
