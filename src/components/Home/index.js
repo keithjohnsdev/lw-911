@@ -13,10 +13,12 @@ import HeartRateModal from "./Modals/HeartRateModal";
 import BloodGlucoseModal from "./Modals/BloodGlucoseModal";
 import LorazepamModal from "./Modals/LorazepamModal";
 import GabapentinModal from "./Modals/GabapentinModal";
+import RecallModal from "./Modals/RecallModal";
 
 const Home = (props) => {
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
+  const [formsSidebar, setFormsSidebar] = useState(false);
   const [bloodPressureModal, setBloodPressureModal] = useState(false);
   const [heartRateModal, setHeartRateModal] = useState(false);
   const [lorazepamModal, setLorazepamModal] = useState(false);
@@ -25,6 +27,7 @@ const Home = (props) => {
   const [showHealthInsurance, setShowHealthInsurance] = useState(false);
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
   const [DNRModal, setDNRModal] = useState(false);
+  const [recallModal, setRecallModal] = useState(false);
 
   function handleShowSidebar() {
     setShowSidebar(true);
@@ -51,6 +54,8 @@ const Home = (props) => {
       setGabapentinModal(true);
     } else if (med === "DNR") {
       setDNRModal(true);
+    } else if (med === "Recall") {
+      setRecallModal(true);
     }
   }
 
@@ -74,6 +79,8 @@ const Home = (props) => {
         show={showSidebar}
         handleHideSidebar={handleHideSidebar}
         patientFound={patientFound}
+        formsSidebar={formsSidebar}
+        showForms={() => setFormsSidebar(true)}
       />
       {showHealthInsurance ? (
         <HealthInsurance navigateHome={navigateHome} />
@@ -132,6 +139,11 @@ const Home = (props) => {
               show={DNRModal}
               onBackdropClick={() => setDNRModal(false)}>
         <DNR closeModal={() => setDNRModal(false)}/>
+      </Modal>
+      <Modal
+              show={recallModal}
+              onBackdropClick={() => setRecallModal(false)}>
+        <RecallModal closeModal={() => setRecallModal(false)}/>
       </Modal>
     </div>
   );

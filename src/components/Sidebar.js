@@ -7,7 +7,9 @@ import GrayInput from "./Shared/Inputs";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router";
 const Sidebar = (props) => {
+  const navigate = useNavigate();
   const [dateFocused, setDateFocused] = useState(false);
   const [patientLookupData, setPatientLookupData] = useState({
     fName: "",
@@ -66,12 +68,12 @@ const Sidebar = (props) => {
     }
   }
 
-  function clearSelection () {
+  function clearSelection() {
     setPatientLookupData({
       fName: "",
       lName: "",
       ssn: "",
-      dob: ""
+      dob: "",
     });
   }
 
@@ -225,10 +227,13 @@ const Sidebar = (props) => {
           </form>
           <div className="hr-bar" />
           <div className="lb-buttons-wrapper pt-found">
-            <GrayBorderButton onClick={clearSelection}>Clear Selection</GrayBorderButton>
+            <GrayBorderButton onClick={clearSelection}>
+              Clear Selection
+            </GrayBorderButton>
             <GrayBorderButton>Export Data to CSV</GrayBorderButton>
-            <GrayBorderButton>Auto-Populate Forms</GrayBorderButton>
-            <GrayBorderButton>Third Party Insurance Lookup</GrayBorderButton>
+            <GrayBorderButton onClick={() => navigate("/forms")}>
+              Auto-Populate Forms
+            </GrayBorderButton>
           </div>
         </div>
         <div className="sb-footer"></div>

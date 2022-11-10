@@ -265,7 +265,7 @@ const Patient = (props) => {
           })}
         </div>
       </CollapsingDiv>
-      <CollapsingDiv title="DNR" height="70">
+      <CollapsingDiv title="Do Not Resuscitate (DNR)" height="70">
         <div className="patient-data-rows">
           <div className="patient-data-row">
             <Container3>
@@ -278,6 +278,26 @@ const Patient = (props) => {
                     onClick={() => props.showMedicationsModal("DNR")}
                   >
                     View Form
+                  </LightBlueButton>
+                </div>
+              </div>
+            </Container3>
+          </div>
+        </div>
+      </CollapsingDiv>
+      <CollapsingDiv title="Recalled Product Purchases (1)" height="70">
+        <div className="patient-data-rows">
+          <div className="patient-data-row">
+            <Container3>
+              <div className="row-content">
+                <div className="metric-title">
+                  <p className="title">Abbott Similac Advance</p>
+                </div>
+                <div className="metric-value">
+                  <LightBlueButton
+                    onClick={() => props.showMedicationsModal("Recall")}
+                  >
+                    View Info
                   </LightBlueButton>
                 </div>
               </div>

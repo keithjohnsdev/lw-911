@@ -1,13 +1,13 @@
 import "./theme";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import HealthInsurance from "./components/Home/HealthInsurance";
+import Forms from "./components/Home/Forms";
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/health-insurance" element={<HealthInsurance />} />
+        <Route path="/forms" element={<Forms />} />
       </Routes>
     </div>
   );

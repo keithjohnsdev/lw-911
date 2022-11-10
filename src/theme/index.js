@@ -10,3 +10,4 @@ import "./Home/Patient.scss";
 import "./Home/HomeModals.scss";
 import "./Home/HealthInsurance.scss";
 import "./Home/AutoInsurance.scss";
+import "./Forms.scss";
