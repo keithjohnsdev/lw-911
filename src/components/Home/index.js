@@ -7,6 +7,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Shared/Modal";
+import DNR from "./Modals/DNR";
 import BloodPressureModal from "./Modals/BloodPressureModal";
 import HeartRateModal from "./Modals/HeartRateModal";
 import BloodGlucoseModal from "./Modals/BloodGlucoseModal";
@@ -23,6 +24,7 @@ const Home = (props) => {
   const [bloodGlucoseModal, setBloodGlucoseModal] = useState(false);
   const [showHealthInsurance, setShowHealthInsurance] = useState(false);
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
+  const [DNRModal, setDNRModal] = useState(false);
 
   function handleShowSidebar() {
     setShowSidebar(true);
@@ -47,6 +49,8 @@ const Home = (props) => {
       setLorazepamModal(true);
     } else if (med === "Gabapentin") {
       setGabapentinModal(true);
+    } else if (med === "DNR") {
+      setDNRModal(true);
     }
   }
 
@@ -58,7 +62,7 @@ const Home = (props) => {
     }
   }
 
-  function navigateHome () {
+  function navigateHome() {
     setShowHealthInsurance(false);
     setShowAutoInsurance(false);
   }
@@ -71,11 +75,11 @@ const Home = (props) => {
         handleHideSidebar={handleHideSidebar}
         patientFound={patientFound}
       />
-      { showHealthInsurance 
-      ? <HealthInsurance navigateHome={navigateHome}/>
-      : showAutoInsurance
-      ? <AutoInsurance navigateHome={navigateHome}/>
-      : patientFound ? (
+      {showHealthInsurance ? (
+        <HealthInsurance navigateHome={navigateHome} />
+      ) : showAutoInsurance ? (
+        <AutoInsurance navigateHome={navigateHome} />
+      ) : patientFound ? (
         <Patient
           showVitalsModal={showVitalsModal}
           showMedicationsModal={showMedicationsModal}
@@ -123,6 +127,11 @@ const Home = (props) => {
         onBackdropClick={() => setGabapentinModal(false)}
       >
         <GabapentinModal closeModal={() => setGabapentinModal(false)} />
+      </Modal>
+      <Modal
+              show={DNRModal}
+              onBackdropClick={() => setDNRModal(false)}>
+        <DNR closeModal={() => setDNRModal(false)}/>
       </Modal>
     </div>
   );

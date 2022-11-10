@@ -21,8 +21,8 @@ const Patient = (props) => {
   const vaccinationsData = mockVaccinationsData;
   const allergiesData = mockAllergiesData;
 
-  function viewInsuranceDetails (type) {
-      props.showInsurance(type);
+  function viewInsuranceDetails(type) {
+    props.showInsurance(type);
   }
 
   return (
@@ -84,7 +84,12 @@ const Patient = (props) => {
         <div className="patient-data-rows">
           {vitalsData.map((metric, index) => {
             return (
-              <VitalsRow key={index} metric={metric} index={index} showVitalsModal={props.showVitalsModal}/>
+              <VitalsRow
+                key={index}
+                metric={metric}
+                index={index}
+                showVitalsModal={props.showVitalsModal}
+              />
             );
           })}
         </div>
@@ -128,7 +133,7 @@ const Patient = (props) => {
           allergiesData.length === 0 ? 70 : allergiesData.length * 70
         }`}
       >
-         <div className="patient-data-rows">
+        <div className="patient-data-rows">
           {allergiesData.map((metric, index) => {
             return (
               <div className="patient-data-row" key={index}>
@@ -141,7 +146,10 @@ const Patient = (props) => {
                       )}
                     </div>
                     <div className="metric-value">
-                      <p>ICD-10 Code: <span style={{fontWeight: "600"}}>{metric.ICD}</span></p>
+                      <p>
+                        ICD-10 Code:{" "}
+                        <span style={{ fontWeight: "600" }}>{metric.ICD}</span>
+                      </p>
                     </div>
                   </div>
                 </Container3>
@@ -150,9 +158,12 @@ const Patient = (props) => {
           })}
         </div>
       </CollapsingDiv>
-      <CollapsingDiv title={`Insurances (${insuranceData.length})`} height={`${
+      <CollapsingDiv
+        title={`Insurances (${insuranceData.length})`}
+        height={`${
           insuranceData.length === 0 ? 70 : insuranceData.length * 70
-        }`}>
+        }`}
+      >
         <div className="patient-data-rows">
           {insuranceData.map((metric, index) => {
             return (
@@ -252,6 +263,26 @@ const Patient = (props) => {
               </div>
             );
           })}
+        </div>
+      </CollapsingDiv>
+      <CollapsingDiv title="DNR" height="70">
+        <div className="patient-data-rows">
+          <div className="patient-data-row">
+            <Container3>
+              <div className="row-content">
+                <div className="metric-title">
+                  <p className="title red">Do Not Resuscitate</p>
+                </div>
+                <div className="metric-value">
+                  <LightBlueButton
+                    onClick={() => props.showMedicationsModal("DNR")}
+                  >
+                    View Form
+                  </LightBlueButton>
+                </div>
+              </div>
+            </Container3>
+          </div>
         </div>
       </CollapsingDiv>
     </div>
