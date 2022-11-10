@@ -19,7 +19,7 @@ const FormListModal = (props) => {
           <div className="header">Select Form Template</div>
           <div className="body">
             <div className="template-row" onClick={() => props.handleShowForm("EMS Worksheet")}>EMS Patient Care Worksheet (F-47489)</div>
-            <div className="template-row">Patient Care Report (13-984110-01)</div>
+            <div className="template-row" onClick={() => props.handleShowForm("Patient Care Report")}>Patient Care Report (13-984110-01)</div>
           </div>
         </div>
       </div>

@@ -19,8 +19,13 @@ const Forms = (props) => {
   function handleShowForm(selectedForm) {
     setFormListModal(false);
     if (selectedForm === "EMS Worksheet") {
-      setForm("../../theme/assets/ems-worksheet-form.png");
+      setForm("1");
       setFormTitle("EMS Patient Care Worksheet (F-47489)");
+      setFormFilled(false);
+      setShowForm(true);
+    } else if (selectedForm === "Patient Care Report") {
+      setForm("2");
+      setFormTitle("Patient Care Report (13-984110-01)");
       setFormFilled(false);
       setShowForm(true);
     }
