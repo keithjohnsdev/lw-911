@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/lw-911/static/css/main.bae04d9c.css",
-    "main.js": "/lw-911/static/js/main.b1a6df44.js",
+    "main.js": "/lw-911/static/js/main.348be6f5.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
     "static/media/ems-worksheet-form-filled.png": "/lw-911/static/media/ems-worksheet-form-filled.d9386cb508973659b6fc.png",
+    "static/media/patient-care-report-filled.png": "/lw-911/static/media/patient-care-report-filled.57df72c1311a232162a4.png",
     "static/media/ems-worksheet-form.png": "/lw-911/static/media/ems-worksheet-form.08734c2a05ea56f8f9a4.png",
+    "static/media/patient-care-report.png": "/lw-911/static/media/patient-care-report.658983f8fc336df00ac3.png",
     "static/media/DNR.png": "/lw-911/static/media/DNR.515314c480b53ca22654.png",
     "static/media/accident-report.png": "/lw-911/static/media/accident-report.948f2deefec60663a936.png",
     "static/media/abbott-recall.pdf": "/lw-911/static/media/abbott-recall.d6963c6c36f3f3834329.pdf",
@@ -17,11 +19,11 @@
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "index.html": "/lw-911/index.html",
     "main.bae04d9c.css.map": "/lw-911/static/css/main.bae04d9c.css.map",
-    "main.b1a6df44.js.map": "/lw-911/static/js/main.b1a6df44.js.map",
+    "main.348be6f5.js.map": "/lw-911/static/js/main.348be6f5.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bae04d9c.css",
-    "static/js/main.b1a6df44.js"
+    "static/js/main.348be6f5.js"
   ]
 }
