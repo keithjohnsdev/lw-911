@@ -21,6 +21,9 @@
     width: 67%;
     min-width: 690px;
     // max-width: 850px;
+    &.width-90 {
+      width: 90%;
+    }
   }
 
   .card {

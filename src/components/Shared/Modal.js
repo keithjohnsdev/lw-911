@@ -22,7 +22,7 @@ const Modal = (props) => {
         className={`modal-backdrop ${animateOut}`}
         onClick={props.onBackdropClick}
       ></div>
-      <div className={`modal ${animateOut}`}>
+      <div className={`modal ${animateOut} ${props.width}`}>
         <div className="card">{props.children}</div>
       </div>
     </div>

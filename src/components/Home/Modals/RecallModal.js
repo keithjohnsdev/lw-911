@@ -15,7 +15,7 @@ const RecallModal = (props) => {
           />
         </svg>
       </div>
-      <div className="modal-flex">
+      <div className="modal-flex wide">
         <div className="header">Recall - Abbot Similac Advance</div>
         <div className="body fda-img">
           <div className="fda-img-wrapper">

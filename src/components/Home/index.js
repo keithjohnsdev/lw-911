@@ -135,15 +135,11 @@ const Home = (props) => {
       >
         <GabapentinModal closeModal={() => setGabapentinModal(false)} />
       </Modal>
-      <Modal
-              show={DNRModal}
-              onBackdropClick={() => setDNRModal(false)}>
-        <DNR closeModal={() => setDNRModal(false)}/>
+      <Modal show={DNRModal} onBackdropClick={() => setDNRModal(false)}>
+        <DNR closeModal={() => setDNRModal(false)} />
       </Modal>
-      <Modal
-              show={recallModal}
-              onBackdropClick={() => setRecallModal(false)}>
-        <RecallModal closeModal={() => setRecallModal(false)}/>
+      <Modal show={recallModal} onBackdropClick={() => setRecallModal(false)} width="width-90">
+        <RecallModal closeModal={() => setRecallModal(false)} />
       </Modal>
     </div>
   );
