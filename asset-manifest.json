@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/lw-911/static/css/main.1bf323f0.css",
-    "main.js": "/lw-911/static/js/main.54ce4851.js",
+    "main.css": "/lw-911/static/css/main.c7031d5d.css",
+    "main.js": "/lw-911/static/js/main.2af60815.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
     "static/media/DNR.png": "/lw-911/static/media/DNR.515314c480b53ca22654.png",
     "static/media/accident-report.png": "/lw-911/static/media/accident-report.948f2deefec60663a936.png",
+    "static/media/abbott-recall.pdf": "/lw-911/static/media/abbott-recall.d6963c6c36f3f3834329.pdf",
     "static/media/graph-area.png": "/lw-911/static/media/graph-area.ade9b0b861365c249974.png",
     "static/media/gabapentin-fda-info.jpg": "/lw-911/static/media/gabapentin-fda-info.efa00b436b671490f574.jpg",
     "static/media/heart-rate.png": "/lw-911/static/media/heart-rate.c148596f072694efe03d.png",
@@ -13,12 +14,12 @@
     "static/media/claim-timeline.png": "/lw-911/static/media/claim-timeline.fa281ad240a3d970349d.png",
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "index.html": "/lw-911/index.html",
-    "main.1bf323f0.css.map": "/lw-911/static/css/main.1bf323f0.css.map",
-    "main.54ce4851.js.map": "/lw-911/static/js/main.54ce4851.js.map",
+    "main.c7031d5d.css.map": "/lw-911/static/css/main.c7031d5d.css.map",
+    "main.2af60815.js.map": "/lw-911/static/js/main.2af60815.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bf323f0.css",
-    "static/js/main.54ce4851.js"
+    "static/css/main.c7031d5d.css",
+    "static/js/main.2af60815.js"
   ]
 }
