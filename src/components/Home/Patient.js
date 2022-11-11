@@ -69,8 +69,9 @@ const Patient = (props) => {
                   Paramedic EMT Information
                 </p>
                 <p style={{ fontWeight: "600" }}>
-                  I have a dog, but don’t worry his name is Mr. Barky Von
-                  Schnauzer and he barks but he doesn’t bite.
+                  It is easier to get in to my house through the side gate. That
+                  door is closer to my bedroom. Also, I have a small dog that
+                  barks a lot, but don't worry he will not bite.
                 </p>
               </div>
             </div>
