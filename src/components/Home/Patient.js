@@ -1,6 +1,7 @@
 import CollapsingDiv from "../Shared/CollapsingDiv";
 import { Container3 } from "../Shared/Container";
 import VitalsRow from "../Shared/VitalsRow";
+import MedicationsRow from "../Shared/MedicationsRow";
 import { LightBlueButtonBorder as LightBlueButton } from "../Shared/Buttons";
 import {
   mockPatientViewData,
@@ -103,28 +104,11 @@ const Patient = (props) => {
       >
         <div className="patient-data-rows">
           {medicationsData.map((metric, index) => {
-            return (
-              <div className="patient-data-row" key={index}>
-                <Container3>
-                  <div className="row-content">
-                    <div className="metric-title">
-                      <p className="title">{metric.title}</p>
-                      {metric.lastReading && (
-                        <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
-                      )}
-                    </div>
-                    <div className="metric-value">
-                      <p>{metric.dosage}</p>
-                      <LightBlueButton
-                        onClick={() => props.showMedicationsModal(metric.title)}
-                      >
-                        FDA Information
-                      </LightBlueButton>
-                    </div>
-                  </div>
-                </Container3>
-              </div>
-            );
+            return <MedicationsRow 
+            key={index}
+            metric={metric}
+            index={index}
+            showMedicationsModal={props.showMedicationsModal}/>;
           })}
         </div>
       </CollapsingDiv>

@@ -48,11 +48,15 @@
         & .subtitle {
           font-size: 12px;
         }
+        & .metric-title {
+          cursor:pointer;
+        }
         & .metric-value {
           display: flex;
           align-items: center;
           white-space: nowrap;
           min-width: fit-content;
+          cursor: pointer;
           & p {
             padding: 10px 15px;
             &.red {

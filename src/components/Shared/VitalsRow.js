@@ -11,7 +11,7 @@ const VitalsRow = (props) => {
     <div className="patient-data-row">
       <Container3>
         <div className="row-content">
-          <div className="metric-title">
+          <div className={highlightMetric ? "metric-title red" : "metric-title"} onClick={() => setHighlightMetric(current => !current)}>
             <p className="title">{metric.title}</p>
             <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
           </div>
