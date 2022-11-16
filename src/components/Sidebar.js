@@ -385,7 +385,7 @@ const Sidebar = (props) => {
           <div className="hr-bar" />
           <div className="lb-buttons-wrapper">
             <LightBlueButton>Send HIPAA Release</LightBlueButton>
-            <br />
+            <div style={{padding: "6px 0"}} />
             <LightBlueButton>Record Authorization</LightBlueButton>
           </div>
         </div>
