@@ -32,13 +32,22 @@ const Forms = (props) => {
   }
 
   function fillForm() {
-    console.log("fillForm")
+    console.log("fillForm");
     setFormFilled(true);
   }
   return (
     <div className="forms-page fullscreen">
-      <FormsSidebar show={true} openFormList={openFormList} fillForm={fillForm}/>
-      {showForm ? <Form form={form} formTitle={formTitle} formFill={formFilled}/> : <NoForm />}
+      <div className="nda">PURSUANT TO NDA</div>
+      <FormsSidebar
+        show={true}
+        openFormList={openFormList}
+        fillForm={fillForm}
+      />
+      {showForm ? (
+        <Form form={form} formTitle={formTitle} formFill={formFilled} />
+      ) : (
+        <NoForm />
+      )}
       <Modal
         show={formListModal}
         onBackdropClick={() => setFormListModal(false)}
