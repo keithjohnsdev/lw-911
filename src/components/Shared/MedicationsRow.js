@@ -17,8 +17,8 @@ const MedicationsRow = (props) => {
             <p className="subtitle">{`Last Reading: ${metric.lastReading}`}</p>
           )}
         </div>
-        <div className={highlightMetric ? "metric-value red" : "metric-value"} onClick={() => setHighlightMetric(current => !current)}>
-          <p>{metric.dosage}</p>
+        <div className={highlightMetric ? "metric-value red" : "metric-value"}>
+          <p  onClick={() => setHighlightMetric(current => !current)}>{metric.dosage}</p>
           <LightBlueButton
             onClick={() => props.showMedicationsModal(metric.title)}
           >

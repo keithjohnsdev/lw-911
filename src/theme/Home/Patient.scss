@@ -49,7 +49,9 @@
           font-size: 12px;
         }
         & .metric-title {
-          cursor:pointer;
+          & p {
+            cursor: pointer;
+          }
         }
         & .metric-value {
           display: flex;
