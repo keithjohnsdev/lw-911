@@ -2,8 +2,8 @@
   background-color: #ffffff;
   height: 100vh;
   flex: 0 0 25%;
-  min-width: 260px;
-  max-width: 450px;
+  // min-width: 260px;
+  // max-width: 450px;
   box-shadow: 5px 0px 8px #00000015;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,9 @@
   min-width: fit-content;
   white-space: nowrap;
   z-index: 10;
+  overflow-y: auto;
+  max-width: 335px;
+  min-width: 335px;
 
   & .sb-header {
     flex: 0 0 63px;
@@ -91,8 +94,8 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      background-color: #F3FBFD;
-      color: #7B7373;
+      background-color: #f3fbfd;
+      color: #7b7373;
       padding: 20px;
       border-radius: 5px;
       font-size: 18px;
@@ -122,9 +125,11 @@
   border-radius: 100%;
   width: 60px;
   height: 60px;
-  position: absolute;
-  right: -58px;
-  top: -21px;
+  position: fixed;
+  top: 406px;
+  left: 316px;
+  // right: -58px;
+  // top: -21px;
   cursor: pointer;
   & .caret-div {
     position: relative;
@@ -143,5 +148,15 @@
     & .caret-icon {
       color: #616161;
     }
+  }
+}
+
+.dha-logo-sb {
+  width: 75%;
+  margin: auto;
+  margin-top: 40px;
+
+  &.pt-found {
+    margin-top: 20px;
   }
 }

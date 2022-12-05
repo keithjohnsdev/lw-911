@@ -235,6 +235,7 @@ const Sidebar = (props) => {
               Auto-Populate Forms
             </GrayBorderButton>
           </div>
+          <img className="dha-logo-sb pt-found" src={require("../theme/assets/dha-official-logo.png")} />
         </div>
         <div className="sb-footer"></div>
       </div>
@@ -388,6 +389,7 @@ const Sidebar = (props) => {
             <div style={{padding: "6px 0"}} />
             <LightBlueButton>Record Authorization</LightBlueButton>
           </div>
+          <img className="dha-logo-sb" src={require("../theme/assets/dha-official-logo.png")} />
         </div>
       </div>
     );
