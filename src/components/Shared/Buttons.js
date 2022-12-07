@@ -8,7 +8,7 @@ const LightBlueButton = (props) => {
 
 export const LightBlueButtonBorder = (props) => {
   return (
-    <button className="lb-button border" onClick={props.onClick}>
+    <button className="lb-button border" onClick={props.onClick} type={props.type}>
       {props.children}
     </button>
   );

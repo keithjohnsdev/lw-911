@@ -31,7 +31,7 @@ const Patient = (props) => {
       <div className="patient-found-banner">Patient Found Successfully!</div>
       <CollapsingDiv title="Personal Info" height="245">
         <Container3>
-        <div className="nda">PURSUANT TO NDA</div>
+        <div className="nda">PURSUANT TO LifeWallet/Verizon NDA</div>
           <div className="patient-info">
             <div className="patient-info-top">
               <div className="patient-img">

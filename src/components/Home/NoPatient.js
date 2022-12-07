@@ -3,7 +3,7 @@ import Container2 from "../Shared/Container";
 const NoPatient = (props) => {
   return (
       <Container2>
-        <div className="nda">PURSUANT TO NDA</div>
+        <div className="nda">PURSUANT TO LifeWallet/Verizon NDA</div>
         <div className="no-patient">
           <svg
             width="160"

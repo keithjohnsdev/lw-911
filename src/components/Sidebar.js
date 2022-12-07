@@ -86,7 +86,7 @@ const Sidebar = (props) => {
     return (
       <div className={`sidebar ${props.show ? "" : "collapsed"}`}>
         <div className="sb-header">
-          <div className="sb-header-left blue-link">Logout</div>
+          <div className="sb-header-left blue-link" onClick={props.logOut}>Logout</div>
           <div className="sb-header-center">Edwin Rivera</div>
           <div className="sb-header-right">
             <svg
@@ -244,7 +244,7 @@ const Sidebar = (props) => {
     return (
       <div className={`sidebar ${props.show ? "" : "collapsed"}`}>
         <div className="sb-header">
-          <div className="sb-header-left blue-link">Logout</div>
+          <div className="sb-header-left blue-link" onClick={props.logOut}>Logout</div>
           <div className="sb-header-center">Lookup Patient</div>
           <div className="sb-header-right">
             <svg

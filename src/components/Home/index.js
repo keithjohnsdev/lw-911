@@ -1,3 +1,4 @@
+import Login from "./Login";
 import Sidebar from "../Sidebar";
 import NoPatient from "./NoPatient";
 import Patient from "./Patient";
@@ -16,6 +17,7 @@ import GabapentinModal from "./Modals/GabapentinModal";
 import RecallModal from "./Modals/RecallModal";
 
 const Home = (props) => {
+  const [loggedIn, setLoggedIn] = useState(true);
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
   const [formsSidebar, setFormsSidebar] = useState(false);
@@ -28,6 +30,15 @@ const Home = (props) => {
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
   const [DNRModal, setDNRModal] = useState(false);
   const [recallModal, setRecallModal] = useState(false);
+
+  function loginSuccess () {
+    setLoggedIn(true);
+  }
+
+  function handleLogOut () {
+    console.log("logout")
+    setLoggedIn(false);
+  }
 
   function handleShowSidebar() {
     setShowSidebar(true);
@@ -72,77 +83,85 @@ const Home = (props) => {
     setShowAutoInsurance(false);
   }
 
-  return (
-    <div className="home-page fullscreen">
-      <Sidebar
-        onSubmit={() => setPatientFound(true)}
-        show={showSidebar}
-        handleHideSidebar={handleHideSidebar}
-        patientFound={patientFound}
-        formsSidebar={formsSidebar}
-        showForms={() => setFormsSidebar(true)}
-      />
-      {showHealthInsurance ? (
-        <HealthInsurance navigateHome={navigateHome} />
-      ) : showAutoInsurance ? (
-        <AutoInsurance navigateHome={navigateHome} />
-      ) : patientFound ? (
-        <Patient
-          showVitalsModal={showVitalsModal}
-          showMedicationsModal={showMedicationsModal}
-          showInsurance={showInsurance}
+  if (!loggedIn) {
+    return <Login loginSuccess={loginSuccess}/>;
+  } else
+    return (
+      <div className="home-page fullscreen">
+        <Sidebar
+          onSubmit={() => setPatientFound(true)}
+          show={showSidebar}
+          handleHideSidebar={handleHideSidebar}
+          patientFound={patientFound}
+          formsSidebar={formsSidebar}
+          showForms={() => setFormsSidebar(true)}
+          logOut={handleLogOut}
         />
-      ) : (
-        <NoPatient />
-      )}
-      <div
-        className={`toggle-sidebar-home ${showSidebar ? "hidden" : ""}`}
-        onClick={handleShowSidebar}
-      >
-        <div className="caret-div">
-          <div className="caret-icon">
-            <FontAwesomeIcon icon={faAngleLeft} size="2x" />
+        {showHealthInsurance ? (
+          <HealthInsurance navigateHome={navigateHome} />
+        ) : showAutoInsurance ? (
+          <AutoInsurance navigateHome={navigateHome} />
+        ) : patientFound ? (
+          <Patient
+            showVitalsModal={showVitalsModal}
+            showMedicationsModal={showMedicationsModal}
+            showInsurance={showInsurance}
+          />
+        ) : (
+          <NoPatient />
+        )}
+        <div
+          className={`toggle-sidebar-home ${showSidebar ? "hidden" : ""}`}
+          onClick={handleShowSidebar}
+        >
+          <div className="caret-div">
+            <div className="caret-icon">
+              <FontAwesomeIcon icon={faAngleLeft} size="2x" />
+            </div>
           </div>
         </div>
+        <Modal
+          show={bloodPressureModal}
+          onBackdropClick={() => setBloodPressureModal(false)}
+        >
+          <BloodPressureModal closeModal={() => setBloodPressureModal(false)} />
+        </Modal>
+        <Modal
+          show={heartRateModal}
+          onBackdropClick={() => setHeartRateModal(false)}
+        >
+          <HeartRateModal closeModal={() => setHeartRateModal(false)} />
+        </Modal>
+        <Modal
+          show={bloodGlucoseModal}
+          onBackdropClick={() => setBloodGlucoseModal(false)}
+        >
+          <BloodGlucoseModal closeModal={() => setBloodGlucoseModal(false)} />
+        </Modal>
+        <Modal
+          show={lorazepamModal}
+          onBackdropClick={() => setLorazepamModal(false)}
+        >
+          <LorazepamModal closeModal={() => setLorazepamModal(false)} />
+        </Modal>
+        <Modal
+          show={gabapentinModal}
+          onBackdropClick={() => setGabapentinModal(false)}
+        >
+          <GabapentinModal closeModal={() => setGabapentinModal(false)} />
+        </Modal>
+        <Modal show={DNRModal} onBackdropClick={() => setDNRModal(false)}>
+          <DNR closeModal={() => setDNRModal(false)} />
+        </Modal>
+        <Modal
+          show={recallModal}
+          onBackdropClick={() => setRecallModal(false)}
+          width="width-90"
+        >
+          <RecallModal closeModal={() => setRecallModal(false)} />
+        </Modal>
       </div>
-      <Modal
-        show={bloodPressureModal}
-        onBackdropClick={() => setBloodPressureModal(false)}
-      >
-        <BloodPressureModal closeModal={() => setBloodPressureModal(false)} />
-      </Modal>
-      <Modal
-        show={heartRateModal}
-        onBackdropClick={() => setHeartRateModal(false)}
-      >
-        <HeartRateModal closeModal={() => setHeartRateModal(false)} />
-      </Modal>
-      <Modal
-        show={bloodGlucoseModal}
-        onBackdropClick={() => setBloodGlucoseModal(false)}
-      >
-        <BloodGlucoseModal closeModal={() => setBloodGlucoseModal(false)} />
-      </Modal>
-      <Modal
-        show={lorazepamModal}
-        onBackdropClick={() => setLorazepamModal(false)}
-      >
-        <LorazepamModal closeModal={() => setLorazepamModal(false)} />
-      </Modal>
-      <Modal
-        show={gabapentinModal}
-        onBackdropClick={() => setGabapentinModal(false)}
-      >
-        <GabapentinModal closeModal={() => setGabapentinModal(false)} />
-      </Modal>
-      <Modal show={DNRModal} onBackdropClick={() => setDNRModal(false)}>
-        <DNR closeModal={() => setDNRModal(false)} />
-      </Modal>
-      <Modal show={recallModal} onBackdropClick={() => setRecallModal(false)} width="width-90">
-        <RecallModal closeModal={() => setRecallModal(false)} />
-      </Modal>
-    </div>
-  );
+    );
 };
 
 export default Home;

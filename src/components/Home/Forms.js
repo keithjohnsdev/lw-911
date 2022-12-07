@@ -37,7 +37,7 @@ const Forms = (props) => {
   }
   return (
     <div className="forms-page fullscreen">
-      <div className="nda">PURSUANT TO NDA</div>
+      <div className="nda">PURSUANT TO LifeWallet/Verizon NDA</div>
       <FormsSidebar
         show={true}
         openFormList={openFormList}

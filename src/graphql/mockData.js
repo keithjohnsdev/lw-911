@@ -1,3 +1,8 @@
+export const loginCredentials = {
+  username: "frankquesada",
+  password: "barracuda"
+}
+
 export const mockPatientViewData = {
   name: "Edwin Rivera",
   gender: "Male",
