@@ -4,7 +4,7 @@ import NoPatient from "./NoPatient";
 import Patient from "./Patient";
 import HealthInsurance from "./HealthInsurance";
 import AutoInsurance from "./AutoInsurance";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Shared/Modal";
@@ -17,7 +17,6 @@ import GabapentinModal from "./Modals/GabapentinModal";
 import RecallModal from "./Modals/RecallModal";
 
 const Home = (props) => {
-  const [refresh, setRefresh] = useState(false);
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
   const [formsSidebar, setFormsSidebar] = useState(false);
@@ -30,17 +29,17 @@ const Home = (props) => {
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
   const [DNRModal, setDNRModal] = useState(false);
   const [recallModal, setRecallModal] = useState(false);
-  const loggedIn = localStorage.getItem("loggedIn");
+  const loggedIn = sessionStorage.getItem("loggedIn");
 
   function loginSuccess () {
     console.log("loginSuccess ping")
     // setLoggedIn(true);
-    localStorage.setItem('loggedIn', "true")
+    sessionStorage.setItem('loggedIn', "true")
     window.location.reload(false);
   }
 
   function handleLogOut () {
-    localStorage.setItem('loggedIn', "false")
+    sessionStorage.setItem('loggedIn', "false")
     window.location.reload(false);
   }
 

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Shared/Card";
 import GrayInput from "../Shared/Inputs";
 import { LightBlueButtonBorder } from "../Shared/Buttons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { loginCredentials } from "../../graphql/mockData";
 
 const Login = (props) => {
