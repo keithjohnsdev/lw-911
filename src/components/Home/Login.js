@@ -30,25 +30,12 @@ const Login = (props) => {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("keydown", keydownHandler, false);
-    return () => window.removeEventListener("keydown", keydownHandler, false);
-  }, []);
-
-  function keydownHandler(e) {
-    if (e.key === "Enter") {
-      handleSubmit();
-    }
-  }
-
   return (
     <div className="login-page">
       <Card>
         <div className="login-card">
           {loginFail ? (
-            <h3 style={{ paddingBottom: "10px" }}>
-              Please try again.
-            </h3>
+            <h3 style={{ paddingBottom: "10px" }}>Please try again.</h3>
           ) : (
             <h3 style={{ paddingBottom: "10px" }}>
               Please provide credentials to view demo:
@@ -62,6 +49,7 @@ const Login = (props) => {
               type="username"
               name="username"
               onChange={handleChange}
+              value={username}
             />
             <div style={{ marginTop: "10px" }} />
             <GrayInput
@@ -69,6 +57,7 @@ const Login = (props) => {
               type="password"
               name="password"
               onChange={handleChange}
+              value={password}
             />
             <div style={{ marginTop: "10px" }} />
             <LightBlueButtonBorder onClick={handleSubmit}>

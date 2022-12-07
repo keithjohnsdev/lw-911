@@ -4,7 +4,7 @@ import NoPatient from "./NoPatient";
 import Patient from "./Patient";
 import HealthInsurance from "./HealthInsurance";
 import AutoInsurance from "./AutoInsurance";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Shared/Modal";
@@ -17,7 +17,7 @@ import GabapentinModal from "./Modals/GabapentinModal";
 import RecallModal from "./Modals/RecallModal";
 
 const Home = (props) => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [refresh, setRefresh] = useState(false);
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
   const [formsSidebar, setFormsSidebar] = useState(false);
@@ -30,14 +30,18 @@ const Home = (props) => {
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
   const [DNRModal, setDNRModal] = useState(false);
   const [recallModal, setRecallModal] = useState(false);
+  const loggedIn = localStorage.getItem("loggedIn");
 
   function loginSuccess () {
-    setLoggedIn(true);
+    console.log("loginSuccess ping")
+    // setLoggedIn(true);
+    localStorage.setItem('loggedIn', "true")
+    window.location.reload(false);
   }
 
   function handleLogOut () {
-    console.log("logout")
-    setLoggedIn(false);
+    localStorage.setItem('loggedIn', "false")
+    window.location.reload(false);
   }
 
   function handleShowSidebar() {
@@ -83,9 +87,9 @@ const Home = (props) => {
     setShowAutoInsurance(false);
   }
 
-  if (!loggedIn) {
+  if (loggedIn === "false") {
     return <Login loginSuccess={loginSuccess}/>;
-  } else
+  } else if (loggedIn === "true")
     return (
       <div className="home-page fullscreen">
         <Sidebar
