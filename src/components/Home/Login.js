@@ -38,7 +38,7 @@ const Login = (props) => {
             <h3 style={{ paddingBottom: "10px" }}>Please try again.</h3>
           ) : (
             <h3 style={{ paddingBottom: "10px" }}>
-              Please provide credentials to view demo:
+              Please provide credentials to access demo:
             </h3>
           )}
 
