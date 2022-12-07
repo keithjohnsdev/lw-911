@@ -17,7 +17,7 @@ import GabapentinModal from "./Modals/GabapentinModal";
 import RecallModal from "./Modals/RecallModal";
 
 const Home = (props) => {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [patientFound, setPatientFound] = useState(false);
   const [showSidebar, setShowSidebar] = useState(true);
   const [formsSidebar, setFormsSidebar] = useState(false);

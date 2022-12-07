@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Shared/Card";
 import GrayInput from "../Shared/Inputs";
 import { LightBlueButtonBorder } from "../Shared/Buttons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginCredentials } from "../../graphql/mockData";
 
 const Login = (props) => {
@@ -27,6 +27,17 @@ const Login = (props) => {
       props.loginSuccess();
     } else {
       setLoginFail(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("keydown", keydownHandler, false);
+    return () => window.removeEventListener("keydown", keydownHandler, false);
+  }, []);
+
+  function keydownHandler(e) {
+    if (e.key === "Enter") {
+      handleSubmit();
     }
   }
 
