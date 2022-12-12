@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lw-911/static/css/main.b9d2f7ab.css",
-    "main.js": "/lw-911/static/js/main.df0ee1a9.js",
+    "main.css": "/lw-911/static/css/main.f0123304.css",
+    "main.js": "/lw-911/static/js/main.568464a7.js",
     "static/js/787.e7506653.chunk.js": "/lw-911/static/js/787.e7506653.chunk.js",
     "static/media/ems-worksheet-form-filled.png": "/lw-911/static/media/ems-worksheet-form-filled.d9386cb508973659b6fc.png",
     "static/media/patient-care-report-filled.png": "/lw-911/static/media/patient-care-report-filled.57df72c1311a232162a4.png",
@@ -19,12 +19,12 @@
     "static/media/edwin.png": "/lw-911/static/media/edwin.0e999f6734a455748334.png",
     "static/media/dha-official-logo.png": "/lw-911/static/media/dha-official-logo.07d0a0b63fc5b2c7f86f.png",
     "index.html": "/lw-911/index.html",
-    "main.b9d2f7ab.css.map": "/lw-911/static/css/main.b9d2f7ab.css.map",
-    "main.df0ee1a9.js.map": "/lw-911/static/js/main.df0ee1a9.js.map",
+    "main.f0123304.css.map": "/lw-911/static/css/main.f0123304.css.map",
+    "main.568464a7.js.map": "/lw-911/static/js/main.568464a7.js.map",
     "787.e7506653.chunk.js.map": "/lw-911/static/js/787.e7506653.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9d2f7ab.css",
-    "static/js/main.df0ee1a9.js"
+    "static/css/main.f0123304.css",
+    "static/js/main.568464a7.js"
   ]
 }
