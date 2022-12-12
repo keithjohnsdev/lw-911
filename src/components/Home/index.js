@@ -29,19 +29,14 @@ const Home = (props) => {
   const [showAutoInsurance, setShowAutoInsurance] = useState(false);
   const [DNRModal, setDNRModal] = useState(false);
   const [recallModal, setRecallModal] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem("loggedIn") === null) {
       sessionStorage.setItem("loggedIn", "false");
     }
-    setLoggedIn(sessionStorage.getItem("loggedIn"));
-    console.log(loggedIn)
   }, []);
 
   function loginSuccess() {
-    console.log("loginSuccess ping");
-    setLoggedIn(true);
     sessionStorage.setItem("loggedIn", "true");
     window.location.reload(false);
   }
@@ -94,7 +89,7 @@ const Home = (props) => {
     setShowAutoInsurance(false);
   }
 
-  if (loggedIn === "false") {
+  if (sessionStorage.getItem("loggedIn") === "false") {
     return <Login loginSuccess={loginSuccess} />;
   } else {
     return (
